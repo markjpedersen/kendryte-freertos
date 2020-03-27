@@ -16,3 +16,4 @@ CMakeSettings.json
 *.tar.*
 cmake-build-*
 /third_party/userland
+*~

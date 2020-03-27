@@ -43,6 +43,10 @@
 #define GRN_GPIONUM	(5)
 #define RED_GPIONUM	(6) 
 
+// For IMU interrupts.
+#define ACC_INT_IO	(15)
+#define ACC_INT_GPIONUM	(7)
+
 const power_bank_cfg_t g_power_bank_cfg =
 {
     .version = PIN_CFG_VERSION,
@@ -56,7 +60,7 @@ const power_bank_cfg_t g_power_bank_cfg =
 const fpioa_cfg_t g_fpioa_cfg =
 {
     .version = PIN_CFG_VERSION,
-    .functions_count = 9,
+    .functions_count = 10,
     .functions =
     {
         {DCX_IO, FUNC_GPIOHS0 + DCX_GPIONUM},	// for LCD
@@ -69,7 +73,8 @@ const fpioa_cfg_t g_fpioa_cfg =
 
 	{BLU_IO, FUNC_GPIOHS0 + BLU_GPIONUM},	// for blue LED
 	{GRN_IO, FUNC_GPIOHS0 + GRN_GPIONUM},	// for green LED
-	{RED_IO, FUNC_GPIOHS0 + RED_GPIONUM}	// for red LED
+	{RED_IO, FUNC_GPIOHS0 + RED_GPIONUM},	// for red LED
+	{ACC_INT_IO, FUNC_GPIOHS0 + ACC_INT_GPIONUM}	// for Accel Int
     }
 };
 const pin_cfg_t g_pin_cfg =
